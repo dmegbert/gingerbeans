@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid"
 import Button from "@material-ui/core/Button"
 import { Link as ScrollLink } from "react-scroll"
 
-import gbLogoWhite from '../gb-hero-logo.png'
+import gbLogoWhite from '../imgs/gb-hero-logo.png'
 
 
 const useStyles = makeStyles((theme) => ({

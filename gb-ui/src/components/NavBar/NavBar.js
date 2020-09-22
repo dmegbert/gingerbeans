@@ -4,7 +4,7 @@ import AppBar from "@material-ui/core/AppBar"
 import Toolbar from "@material-ui/core/Toolbar"
 
 import AppBarCollapse from "./AppBarCollapse"
-import gbLogo from "../../gb-logo-wh-transparent-bg.png"
+import gbLogo from "../../imgs/gb-logo-wh-transparent-bg.png"
 import {animateScroll as Scroll} from "react-scroll"
 import makeStyles from "@material-ui/core/styles/makeStyles"
 import useScrollTrigger from "@material-ui/core/useScrollTrigger"

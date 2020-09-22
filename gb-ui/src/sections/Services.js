@@ -10,7 +10,7 @@ import StarBorderIcon from '@material-ui/icons/StarBorder';
 const useStyles = makeStyles((theme) => ({
 	gridContainer: {
 		width: "100%",
-		height: "50%",
+		height: "40%",
 	},
 	containerFluid: {
 		height: "90vh",
@@ -36,24 +36,24 @@ const Services = () => {
 		<div id="services" className={classes.containerFluid}>
 			<Grid container direction="row" justify="center" alignItems="center" className={classes.gridContainer}>
 				<Grid item xs={12} sm={12} md={8} >
-					<Typography variant="h2">Our Approach</Typography>
+					<Typography variant="h2">Services</Typography>
 					<Typography variant="h6" color="textSecondary">
-						Building great software begins with strong relationships.
+						Building great software begins with strong relationships. We are guided by an unwavering commitment to our clients' success.
 					</Typography>
 				</Grid>
 			</Grid>
 			<Grid container direction="row" justify="center" alignItems="flex-start" className={classes.gridContainer} spacing={4}>
-				<Grid item md>
+				<Grid item xs={12} md={4}>
 					<TrendingUpIcon className={classes.icon}/>
 					<Typography variant="h3">Value</Typography>
 					<Typography paragraph color="textSecondary">Things go here</Typography>
 				</Grid>
-				<Grid item lg={4}>
+				<Grid item xs={12} md={4}>
 					<HearingIcon className={classes.icon}/>
 					<Typography variant="h3">Communication</Typography>
 					<Typography paragraph color="textSecondary">Things go here</Typography>
 				</Grid>
-				<Grid item md>
+				<Grid item xs={12} md={4}>
 					<StarBorderIcon className={classes.icon}/>
 					<Typography variant="h3">Excellence</Typography>
 					<Typography paragraph color="textSecondary">Things go here</Typography>
