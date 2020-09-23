@@ -27,6 +27,7 @@ const styles = {
 	},
 	navigation: {
 		height: "10vh",
+		minHeight: 75,
 	},
 	toggleDrawer: {},
 	appTitle: {}

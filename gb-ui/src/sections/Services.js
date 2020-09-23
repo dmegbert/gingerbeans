@@ -8,14 +8,22 @@ import StarBorderIcon from '@material-ui/icons/StarBorder';
 
 
 const useStyles = makeStyles((theme) => ({
-	gridContainer: {
-		width: "100%",
-		height: "40%",
-	},
 	containerFluid: {
-		height: "90vh",
+		minHeight: "100vh",
 		width: "100%",
 		textAlign: "center",
+		[theme.breakpoints.up("md")]: {
+			height: "90vh"
+		},
+	},
+	gridHeader: {
+		textAlign: "center",
+		width: "100%",
+		height: "50%",
+	},
+	gridBody: {
+		width: "100%",
+		height: "50%",
 	},
 	icon: {
 		[theme.breakpoints.down("xs")]: {
@@ -34,29 +42,29 @@ const Services = () => {
 
 	return (
 		<div id="services" className={classes.containerFluid}>
-			<Grid container direction="row" justify="center" alignItems="center" className={classes.gridContainer}>
-				<Grid item xs={12} sm={12} md={8} >
+			<Grid container direction="row" justify="center" alignItems="center" className={classes.gridHeader}>
+				<Grid item xs={12} sm={12} md={6} style={{ marginTop: "10vh"}}>
 					<Typography variant="h2">Services</Typography>
 					<Typography variant="h6" color="textSecondary">
-						Building great software begins with strong relationships. We are guided by an unwavering commitment to our clients' success.
+						Building great software begins with strong relationships. We are guided by an unwavering commitment to our clients' success. Get in touch with us and experience the GingerBeans difference.
 					</Typography>
 				</Grid>
 			</Grid>
-			<Grid container direction="row" justify="center" alignItems="flex-start" className={classes.gridContainer} spacing={4}>
-				<Grid item xs={12} md={4}>
+			<Grid container direction="row" justify="center" alignItems="flex-start" className={classes.gridBody} spacing={4}>
+				<Grid item xs={12} md={4} >
 					<TrendingUpIcon className={classes.icon}/>
-					<Typography variant="h3">Value</Typography>
-					<Typography paragraph color="textSecondary">Things go here</Typography>
+					<Typography variant="h3">Product Prototyping</Typography>
+					<Typography paragraph color="textSecondary">Do you have a great idea? We are expert at transforming concepts into beautiful software. We can rapidly launch a lean prototype so you can get feedback ASAP.</Typography>
 				</Grid>
 				<Grid item xs={12} md={4}>
 					<HearingIcon className={classes.icon}/>
-					<Typography variant="h3">Communication</Typography>
-					<Typography paragraph color="textSecondary">Things go here</Typography>
+					<Typography variant="h3">All Things API</Typography>
+					<Typography paragraph color="textSecondary">Do you need to develop or expand an API? What about connecting to a partner's API? Both? We can create the API solution for your needs. From proof of concept to mission-critical integrations, we can help.</Typography>
 				</Grid>
 				<Grid item xs={12} md={4}>
 					<StarBorderIcon className={classes.icon}/>
-					<Typography variant="h3">Excellence</Typography>
-					<Typography paragraph color="textSecondary">Things go here</Typography>
+					<Typography variant="h3">Data Solutions</Typography>
+					<Typography paragraph color="textSecondary">Do you suspect that treasures lurk in your data? Wish you could test out an idea for adding some AI into a product? Partner with GingerBeans to get tangible results for your next data project.</Typography>
 				</Grid>
 			</Grid>
 		</div>

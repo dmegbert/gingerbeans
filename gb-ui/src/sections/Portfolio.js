@@ -16,8 +16,11 @@ import EcoOutlinedIcon from '@material-ui/icons/EcoOutlined';
 
 const useStyles = makeStyles((theme) => ({
 	containerFluid: {
-		height: "90vh",
+		minHeight: "100vh",
 		width: "100%",
+		[theme.breakpoints.up("md")]: {
+			height: "90vh"
+		},
 	},
 	gridHeader: {
 		textAlign: "center",
@@ -44,7 +47,7 @@ const Portfolio = () => {
 	return (
 		<div id="portfolio" className={classes.containerFluid}>
 			<Grid container direction="row" justify="center" alignItems="center" className={classes.gridHeader}>
-				<Grid item xs={12} sm={12} md={6}>
+				<Grid item xs={12} sm={12} md={6} style={{ marginTop: "10vh"}}>
 					<Typography variant="h2">Recent Projects</Typography>
 				</Grid>
 			</Grid>
