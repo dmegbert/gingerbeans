@@ -5,6 +5,8 @@ import evergreen1 from "../imgs/evergreen-home.png"
 import evergreen2 from "../imgs/evergreen-protoype.jpg"
 import evergreen3 from "../imgs/evergreen-dashboard.png"
 
+import "./carousel.scss"
+
 const GbCarousel = () => {
 
 	return (
