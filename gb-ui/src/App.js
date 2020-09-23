@@ -3,7 +3,7 @@ import React from 'react';
 import { ThemeProvider } from '@material-ui/core/styles'
 
 import theme from "./sections/GingerTheme"
-import './App.css';
+import './App.scss';
 import LandingPage from "./pages/LandingPage"
 
 const App = () => {
