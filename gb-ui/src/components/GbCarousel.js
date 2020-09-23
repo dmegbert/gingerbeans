@@ -5,7 +5,11 @@ import evergreen1 from "../imgs/evergreen-home.png"
 import evergreen2 from "../imgs/evergreen-protoype.jpg"
 import evergreen3 from "../imgs/evergreen-dashboard.png"
 
-import "./carousel.scss"
+// general styles
+import 'style!css!react-responsive-carousel/lib/styles/main.css';
+
+// carousel styles
+import 'style!css!react-responsive-carousel/lib/styles/carousel.css';
 
 const GbCarousel = () => {
 
