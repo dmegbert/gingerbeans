@@ -1,6 +1,6 @@
 import React from "react"
 import { Carousel } from "react-responsive-carousel"
-import "react-responsive-carousel/lib/styles/carousel.min.css"
+import '../carousel.min.css'
 
 import evergreen1 from "../imgs/evergreen-home.png"
 import evergreen2 from "../imgs/evergreen-protoype.jpg"
