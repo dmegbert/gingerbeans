@@ -1,6 +1,6 @@
 import React from "react";
 import {CarouselProvider, Image, Slide, Slider} from "pure-react-carousel";
-import "pure-react-carousel/dist/react-carousel.es.css";
+//import "pure-react-carousel/dist/react-carousel.es.css";
 
 import evergreen1 from "../imgs/evergreen-home.png";
 import evergreen2 from "../imgs/evergreen-protoype.jpg";
