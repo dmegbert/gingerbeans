@@ -12,6 +12,7 @@ RUN yarn build
 FROM nginx:alpine
 COPY --from=build /usr/src/app/build /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/nginx.conf
+RUN mkdir /usr/share/nginx/blk-blur
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]

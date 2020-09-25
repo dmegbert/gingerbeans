@@ -10,3 +10,4 @@ services:
       - 443:443
     volumes:
       - /home/ubuntu/ssl:/etc/nginx/certs
+      - /root/blk-blur/blk-blur-ui/build:/usr/share/nginx/blk-blur
