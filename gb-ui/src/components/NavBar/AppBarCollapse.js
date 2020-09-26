@@ -26,6 +26,11 @@ const useStyles = makeStyles((theme) => ({
 		position: "relative",
 		width: "100%",
 		background: "transparent"
+	},
+	buttonText: {
+		textTransform: "uppercase",
+		fontSize: "1.25rem",
+		paddingLeft: 20,
 	}
 }))
 
@@ -67,7 +72,7 @@ const AppBarCollapse = () => {
 					duration={1000}
 					smooth={true}
 				>
-					<Button color="inherit">Services</Button>
+					<Button color="inherit" className={classes.buttonText}>Services</Button>
 				</ScrollLink>
 				<ScrollLink
 					activeClass="buttonActive"
@@ -77,7 +82,7 @@ const AppBarCollapse = () => {
 					duration={1000}
 					smooth={true}
 				>
-					<Button color="inherit">Portfolio</Button>
+					<Button className={classes.buttonText} color="inherit">Portfolio</Button>
 				</ScrollLink>
 			</div>
 	</div>
