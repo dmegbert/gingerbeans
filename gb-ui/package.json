@@ -141,5 +141,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "prettier": {
+    "semi": false
   }
 }

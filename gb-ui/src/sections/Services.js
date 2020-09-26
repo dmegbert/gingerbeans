@@ -43,7 +43,7 @@ const Services = () => {
 	return (
 		<div id="services" className={classes.containerFluid}>
 			<Grid container direction="row" justify="center" alignItems="center" className={classes.gridHeader}>
-				<Grid item xs={12} sm={12} md={6} style={{ marginTop: "10vh"}}>
+				<Grid item xs={12} sm={12} md={6} style={{ marginTop: "15vh"}}>
 					<Typography variant="h2">Services</Typography>
 					<Typography variant="h6" color="textSecondary">
 						Building great software begins with strong relationships. We are guided by an unwavering commitment to our clients' success. Get in touch with us and experience the GingerBeans difference.

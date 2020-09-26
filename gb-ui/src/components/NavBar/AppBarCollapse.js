@@ -6,11 +6,12 @@
  */
 import React from "react"
 import {Button, MenuItem} from "@material-ui/core"
-import {withStyles} from "@material-ui/core/styles"
+import {makeStyles} from "@material-ui/core/styles"
 import ButtonAppBarCollapse from "./ButtonAppBarCollapse"
 import {Link as ScrollLink} from "react-scroll"
 
-const styles = theme => ({
+
+const useStyles = makeStyles((theme) => ({
 	root: {
 		position: "absolute",
 		right: 0
@@ -26,57 +27,61 @@ const styles = theme => ({
 		width: "100%",
 		background: "transparent"
 	}
-})
+}))
 
-const AppBarCollapse = props => (
-	<div className={props.classes.root}>
-		<ButtonAppBarCollapse>
-			<ScrollLink
-				activeClass="buttonActive"
-				to="services"
-				spy={true}
-				offset={0}
-				duration={1000}
-				smooth={true}
-			>
-				<MenuItem>
-					Services
-				</MenuItem>
-			</ScrollLink>
-			<ScrollLink
-				activeClass="buttonActive"
-				to="portfolio"
-				spy={true}
-				offset={0}
-				duration={1000}
-				smooth={true}
-			>
-				<MenuItem>Portfolio</MenuItem>
-			</ScrollLink>
-		</ButtonAppBarCollapse>
-		<div className={props.classes.buttonBar} id="appbar-collapse">
-			<ScrollLink
-				activeClass="buttonActive"
-				to="services"
-				spy={true}
-				offset={0}
-				duration={1000}
-				smooth={true}
-			>
-				<Button color="inherit">Services</Button>
-			</ScrollLink>
-			<ScrollLink
-				activeClass="buttonActive"
-				to="portfolio"
-				spy={true}
-				offset={0}
-				duration={1000}
-				smooth={true}
-			>
-				<Button color="inherit">Portfolio</Button>
-			</ScrollLink>
-		</div>
+const AppBarCollapse = () => {
+	const classes = useStyles()
+
+	return (
+		<div className={classes.root}>
+			<ButtonAppBarCollapse>
+				<ScrollLink
+					activeClass="buttonActive"
+					to="services"
+					spy={true}
+					offset={0}
+					duration={1000}
+					smooth={true}
+				>
+					<MenuItem>
+						Services
+					</MenuItem>
+				</ScrollLink>
+				<ScrollLink
+					activeClass="buttonActive"
+					to="portfolio"
+					spy={true}
+					offset={0}
+					duration={1000}
+					smooth={true}
+				>
+					<MenuItem>Portfolio</MenuItem>
+				</ScrollLink>
+			</ButtonAppBarCollapse>
+			<div className={classes.buttonBar} id="appbar-collapse">
+				<ScrollLink
+					activeClass="buttonActive"
+					to="services"
+					spy={true}
+					offset={0}
+					duration={1000}
+					smooth={true}
+				>
+					<Button color="inherit">Services</Button>
+				</ScrollLink>
+				<ScrollLink
+					activeClass="buttonActive"
+					to="portfolio"
+					spy={true}
+					offset={0}
+					duration={1000}
+					smooth={true}
+				>
+					<Button color="inherit">Portfolio</Button>
+				</ScrollLink>
+			</div>
 	</div>
-)
+	)
+}
 
-export default withStyles(styles)(AppBarCollapse)
+export default AppBarCollapse

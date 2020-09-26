@@ -47,7 +47,7 @@ const Portfolio = () => {
 	return (
 		<div id="portfolio" className={classes.containerFluid}>
 			<Grid container direction="row" justify="center" alignItems="center" className={classes.gridHeader}>
-				<Grid item xs={12} sm={12} md={6} style={{ marginTop: "10vh"}}>
+				<Grid item xs={12} sm={12} md={6} style={{ marginTop: "15vh"}}>
 					<Typography variant="h2">Recent Projects</Typography>
 				</Grid>
 			</Grid>
