@@ -62,7 +62,7 @@ const ContactUs = () => {
           <Paper elevation={6} className={classes.paper}>
             <List>
               <Link
-                href="sms:+12162604805&body=Hi%2C%20I%27m%20interested%20in%20building%20something%20amazing."
+                href="sms:+12162604805"
                 underline="none"
               >
                 <ListItem>
