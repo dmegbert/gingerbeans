@@ -74,9 +74,9 @@ const Services = () => {
           <BuildOutlinedIcon className={classes.icon} />
           <Typography variant="h3">Concept Development</Typography>
           <Typography paragraph color="textSecondary">
-            Do you have a great idea? We are expert at transforming our clients'
-            vision into beautiful software. We can rapidly launch a lean
-            prototype so you can get feedback fast while containing costs.
+            Do you have a great idea? We are experts at transforming our
+            clients' vision into beautiful software. We can rapidly launch a
+            lean prototype so you can get feedback fast while containing costs.
           </Typography>
         </Grid>
         <Grid item xs={12} md={4}>
@@ -92,9 +92,11 @@ const Services = () => {
           <StorageIcon className={classes.icon} />
           <Typography variant="h3">Data Solutions</Typography>
           <Typography paragraph color="textSecondary">
-            Do you suspect that treasures lurk in your data? Wish you could test
-            out an idea for adding some AI into a product? Partner with
-            GingerBeans to get tangible results for your next data project.
+            Do you suspect that treasures lurk in your data? Do you need a data
+            plumber who can move, clean, and store your data so that it is
+            actionable? Need some reporting and visualizations? Wish you could
+            test out an idea for adding some AI into a product? Partner with
+            GingerBeans to get tangible results for your next data project fast.
           </Typography>
         </Grid>
       </Grid>
