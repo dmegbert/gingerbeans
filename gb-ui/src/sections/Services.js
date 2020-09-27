@@ -52,7 +52,7 @@ const Services = () => {
           xs={12}
           sm={12}
           md={6}
-          style={{ marginTop: "15vh", marginBottom: "10vh" }}
+          style={{ marginTop: "15vh", marginBottom: "10vh"}}
         >
           <Typography variant="h2">Services</Typography>
           <Typography variant="h6" color="textSecondary">

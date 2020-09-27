@@ -1,34 +1,31 @@
-import React from "react";
-import {CarouselProvider, Image, Slide, Slider} from "pure-react-carousel";
-//import "pure-react-carousel/dist/react-carousel.es.css";
+import React from "react"
+import { CarouselProvider, Image, Slide, Slider } from "pure-react-carousel"
 
-import evergreen1 from "../imgs/evergreen-home.png";
-import evergreen2 from "../imgs/evergreen-protoype.jpg";
-import evergreen3 from "../imgs/evergreen-dashboard.png";
+const renderSlide = (index, alt, src) => {
+  return (
+    <Slide index={index}>
+      <Image alt={alt} src={src} />
+    </Slide>
+  )
+}
 
-const GbCarousel = () => {
+const GbCarousel = (props) => {
+  const { slides, width = 1200, height = 800, interval = 3000 } = props
+
   return (
     <CarouselProvider
-      naturalSlideWidth={1200}
-      naturalSlideHeight={800}
+      naturalSlideWidth={width}
+      naturalSlideHeight={height}
       totalSlides={3}
-      interval={3000}
+      interval={interval}
       isPlaying={true}
       infinite={true}
     >
       <Slider>
-        <Slide index={0}>
-          <Image alt="evergreen home page" src={evergreen1}/>
-        </Slide>
-        <Slide index={1}>
-          <Image alt="evergreen prototype" src={evergreen2}/>
-        </Slide>
-        <Slide index={2}>
-          <Image alt="evergreen dashboard" src={evergreen3}/>
-        </Slide>
+        {slides.map((slide, index) => renderSlide(index, slide.alt, slide.src))}
       </Slider>
     </CarouselProvider>
-  );
-};
+  )
+}
 
 export default GbCarousel
