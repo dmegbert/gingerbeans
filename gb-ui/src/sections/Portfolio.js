@@ -13,9 +13,9 @@ import ListItem from "@material-ui/core/ListItem"
 import CloudDoneOutlinedIcon from "@material-ui/icons/CloudDoneOutlined"
 import ContactlessOutlinedIcon from "@material-ui/icons/ContactlessOutlined"
 import EcoOutlinedIcon from "@material-ui/icons/EcoOutlined"
-import AssignmentTurnedInIcon from "@material-ui/icons/AssignmentTurnedIn"
 import CreditCardIcon from "@material-ui/icons/CreditCard"
 import SyncIcon from "@material-ui/icons/Sync"
+import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 
 import evergreen1 from "../imgs/evergreen-home.png"
 import evergreen2 from "../imgs/evergreen-protoype.jpg"
@@ -98,7 +98,7 @@ const Portfolio = () => {
           direction="row"
           spacing={0}
           justify="center"
-          alignItems="flex-start"
+          alignItems="center"
         >
           <Grid item xs={12} sm={12} md={6} style={{ textAlign: "center" }}>
             <Typography variant="h4">EvergreenCLE</Typography>
@@ -147,7 +147,7 @@ const Portfolio = () => {
           direction="row-reverse"
           spacing={0}
           justify="center"
-          alignItems="flex-start"
+          alignItems="center"
         >
           <Grid item xs={12} sm={12} md={6} style={{ textAlign: "center" }}>
             <Typography variant="h4">SegLogic</Typography>
@@ -169,9 +169,9 @@ const Portfolio = () => {
               </ListItem>
               <ListItem>
                 <ListItemIcon>
-                  <AssignmentTurnedInIcon />
+                  <ShoppingCartOutlinedIcon/>
                 </ListItemIcon>
-                <ListItemText primary="Built tools to meet GDPR compliance requirements" />
+                <ListItemText primary="Developed install process for the Shopify app" />
               </ListItem>
             </List>
             <Typography variant="body1" color="textSecondary"></Typography>

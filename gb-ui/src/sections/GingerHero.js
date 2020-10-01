@@ -34,7 +34,7 @@ const GingerHero = () => {
 	const classes = useStyles()
 	return (
 		<>
-		<div className={classes.heroImage}>
+		<div className={classes.heroImage} data-react={16}>
 			<div className={classes.heroText}>
 				<Typography variant="h5" color="secondary" paragraph align="center">
 					Delivering superior technology solutions
