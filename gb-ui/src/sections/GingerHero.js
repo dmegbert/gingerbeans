@@ -41,7 +41,6 @@ const GingerHero = () => {
 				</Typography>
 				<Grid container spacing={2} justify="center" >
 					<Grid item>
-						{/*<a href="#learn-more" style={{ textDecoration: "none" }}>*/}
 							<ScrollLink
 								activeClass="buttonActive"
 								to="services"
@@ -54,7 +53,6 @@ const GingerHero = () => {
 									Learn More
 								</Button>
 							</ScrollLink>
-						{/*</a>*/}
 					</Grid>
 				</Grid>
 			</div>

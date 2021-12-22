@@ -1,3 +1,4 @@
 .idea/
 gb-ui/node_modules/
 gb-ui/build
+.DS_Store
