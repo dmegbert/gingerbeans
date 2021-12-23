@@ -1,28 +1,22 @@
 #!/usr/bin/env python3
-import os
-
 import aws_cdk as cdk
 
+from infra import Context
 from infra.infra_stack import InfraStack
-
+from infra.s3 import create_s3_bucket
 
 app = cdk.App()
-InfraStack(app, "InfraStack",
-    # If you don't specify 'env', this stack will be environment-agnostic.
-    # Account/Region-dependent features and context lookups will not work,
-    # but a single synthesized template can be deployed anywhere.
 
-    # Uncomment the next line to specialize this stack for the AWS Account
-    # and Region that are implied by the current CLI configuration.
 
-    #env=cdk.Environment(account=os.getenv('CDK_DEFAULT_ACCOUNT'), region=os.getenv('CDK_DEFAULT_REGION')),
+context = Context(app=app)
 
-    # Uncomment the next line if you know exactly what Account and Region you
-    # want to deploy the stack to. */
+stack = InfraStack(
+    app,
+    f"{context.env_name}-{context.service_name}",
+    env=cdk.Environment(account=context.account_id, region=context.aws_region),
+    context=context,
+)
 
-    #env=cdk.Environment(account='123456789012', region='us-east-1'),
-
-    # For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html
-    )
+create_s3_bucket(stack)
 
 app.synth()
