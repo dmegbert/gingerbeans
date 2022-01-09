@@ -7,6 +7,7 @@ class Context:
         self.aws_region = app.node.try_get_context("AWS_REGION")
         self.env_name = app.node.try_get_context("ENV_NAME")
         self.service_name = app.node.try_get_context("SERVICE_NAME")
+        self.domain_name = app.node.try_get_context("DOMAIN_NAME")
 
     def construct_id(self, construct_name):
         return f"{construct_name}-{self.env_name}-{self.service_name}"
