@@ -54,6 +54,18 @@ const AppBarCollapse = () => {
 				</ScrollLink>
 				<ScrollLink
 					activeClass="buttonActive"
+					to="about"
+					spy={true}
+					offset={0}
+					duration={1000}
+					smooth={true}
+				>
+					<MenuItem>
+						About
+					</MenuItem>
+				</ScrollLink>
+				<ScrollLink
+					activeClass="buttonActive"
 					to="portfolio"
 					spy={true}
 					offset={0}
@@ -83,6 +95,16 @@ const AppBarCollapse = () => {
 					smooth={true}
 				>
 					<Button color="inherit" className={classes.buttonText}>Services</Button>
+				</ScrollLink>
+				<ScrollLink
+					activeClass="buttonActive"
+					to="about"
+					spy={true}
+					offset={0}
+					duration={1000}
+					smooth={true}
+				>
+					<Button className={classes.buttonText} color="inherit">About</Button>
 				</ScrollLink>
 				<ScrollLink
 					activeClass="buttonActive"

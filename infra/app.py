@@ -5,6 +5,7 @@ from infra import Context
 from infra.infra_stack import InfraStack
 from infra.static_site import create_static_site
 from infra.r53_hosted_zone import create_hosted_zone
+from infra.r53_mx_record import create_mx_records
 
 app = cdk.App()
 
@@ -28,5 +29,7 @@ r53_zone_stack = InfraStack(
 zone = create_hosted_zone(r53_zone_stack)
 
 create_static_site(stack, zone)
+
+create_mx_records(stack, zone)
 
 app.synth()

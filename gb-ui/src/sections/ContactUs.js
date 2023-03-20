@@ -64,6 +64,7 @@ const ContactUs = () => {
               <Link
                 href="sms:+12162604805"
                 underline="none"
+                target="_blank"
               >
                 <ListItem>
                   <ListItemIcon>
@@ -77,10 +78,11 @@ const ContactUs = () => {
                       color: "textPrimary",
                     }}
                     secondaryTypographyProps={{ variant: "h6" }}
+                    style={{ marginLeft: -10 }}
                   />
                 </ListItem>
               </Link>
-              <Link href="tel:+12162604805" underline="none">
+              <Link href="tel:+12162604805" underline="none" target="_blank">
                 <ListItem>
                   <ListItemIcon>
                     <PhoneIphoneIcon fontSize="large" color="primary" />
@@ -93,22 +95,24 @@ const ContactUs = () => {
                       color: "textPrimary",
                     }}
                     secondaryTypographyProps={{ variant: "h6" }}
+                    style={{ marginLeft: -10 }}
                   />
                 </ListItem>
               </Link>
-              <Link href="mailto:info@gingerbeans.tech" underline="none">
+              <Link href="mailto:david.egbert@gingerbeans.tech" target="_blank" underline="none">
                 <ListItem>
                   <ListItemIcon>
                     <MailOutlineIcon fontSize="large" color="primary" />
                   </ListItemIcon>
                   <ListItemText
                     primary="Email us"
-                    secondary="info@gingerbeans.tech"
+                    secondary="david.egbert@gingerbeans.tech"
                     primaryTypographyProps={{
                       variant: "h5",
                       color: "textPrimary",
                     }}
-                    secondaryTypographyProps={{ variant: "h6" }}
+                    secondaryTypographyProps={{ variant: "subtitle1" }}
+                    style={{ marginLeft: -10 }}
                   />
                 </ListItem>
               </Link>

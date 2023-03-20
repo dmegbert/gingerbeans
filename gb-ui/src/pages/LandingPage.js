@@ -1,6 +1,7 @@
 import React from "react"
 
 import GingerHero from "../sections/GingerHero"
+import About from "../sections/About"
 import Services from "../sections/Services"
 import Portfolio from "../sections/Portfolio"
 import NavBar from "../components/NavBar/NavBar"
@@ -14,6 +15,7 @@ const LandingPage = () => {
 			<NavBar/>
 			<GingerHero/>
 			<Services/>
+			<About />
 			<Portfolio/>
 			<ContactUs/>
 		</div>

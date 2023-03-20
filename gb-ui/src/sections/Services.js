@@ -44,21 +44,24 @@ const Services = () => {
         container
         direction="row"
         justify="center"
-        alignItems="center"
+        alignItems="flex-start"
         className={classes.gridHeader}
       >
         <Grid
           item
           xs={12}
           sm={12}
-          md={6}
-          style={{ marginTop: "15vh", marginBottom: "10vh"}}
+          style={{ marginTop: "13vh", marginBottom: "10vh"}}
         >
-          <Typography variant="h2">Services</Typography>
+          <Typography variant="h2">Services & Technologies</Typography>
           <Typography variant="h6" color="textSecondary">
-            Building great software begins with strong relationships. We are
-            guided by an unwavering commitment to our clients' success. Get in
-            touch with us and experience the GingerBeans difference.
+            <li>Python</li>
+            <li>React / TypeScript</li>
+            <li>SQL Databases - PostgreSQL, MySQL, etc.</li>
+            <li>Elasticsearch</li>
+            <li>Amazon Web Services (AWS)</li>
+            <li>Infrastructure as Code (IaC) - Pulumi, AWS CDK, Terraform</li>
+            <li>CI/CD - CircleCI, Jenkins</li>
           </Typography>
         </Grid>
       </Grid>
@@ -69,14 +72,15 @@ const Services = () => {
         alignItems="flex-start"
         className={classes.gridBody}
         spacing={4}
+        style={{ paddingLeft: 20, paddingRight: 20 }}
       >
         <Grid item xs={12} md={4}>
           <BuildOutlinedIcon className={classes.icon} />
-          <Typography variant="h3">Concept Development</Typography>
+          <Typography variant="h3">Product Development</Typography>
           <Typography paragraph color="textSecondary">
             Do you have a great idea? We are experts at transforming our
             clients' vision into beautiful software. We can rapidly launch a
-            lean prototype so you can get feedback fast while containing costs.
+            lean prototype / minimum viable product (MVP) so you can get feedback fast while containing costs.
           </Typography>
         </Grid>
         <Grid item xs={12} md={4}>
@@ -90,13 +94,13 @@ const Services = () => {
         </Grid>
         <Grid item xs={12} md={4}>
           <StorageIcon className={classes.icon} />
-          <Typography variant="h3">Data Solutions</Typography>
+          <Typography variant="h3">DevOps</Typography>
           <Typography paragraph color="textSecondary">
-            Do you suspect that treasures lurk in your data? Do you need a data
-            plumber who can move, clean, and store your data so that it is
-            actionable? Need some reporting and visualizations? Wish you could
-            test out an idea for adding some AI into a product? Partner with
-            GingerBeans to get tangible results for your next data project fast.
+            Do you need to scale your application?
+            Would you like your development team to be able to deploy new features faster and safer? GingerBeans has
+            significant experience building, deploying, and scaling modern, cloud-native applications. We can
+            help you modernize your infrastructure using best practices such as infrastructure as code (IaC),
+            Continuous Integration / Continuous Deployment (CI/CD), and automated testing.
           </Typography>
         </Grid>
       </Grid>
