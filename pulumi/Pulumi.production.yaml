@@ -1,0 +1,4 @@
+config:
+  aws:region: us-east-2
+  gingerbeans:certificate_arn: arn:aws:acm:us-east-1:282753966079:certificate/90e2e2f7-2f5c-4803-bb16-c67eb6066f12
+  gingerbeans:env: production
