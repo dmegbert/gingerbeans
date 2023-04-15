@@ -8,6 +8,7 @@ import gbLogo from "../../imgs/gb-logo-wh-transparent-bg.png";
 import { animateScroll as Scroll } from "react-scroll";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -86,27 +87,31 @@ const useWindowSize = () => {
 
 const NavBar = (props) => {
   const classes = useStyles();
+  const navigate = useNavigate()
   const { height } = useWindowSize();
-  const showLogo = useScrollTrigger({
+  const showNavBarOnScroll = useScrollTrigger({
     disableHysteresis: true,
     threshold: height * 0.85,
   });
+  const showNav = props.showNavBar || showNavBarOnScroll
+  const onImgClick = props.landingPage ? () => Scroll.scrollToTop() : () => navigate("/")
   return (
     <>
       <ElevationScroll {...props}>
         <AppBar
           position="fixed"
           className={classes.navigation}
-          style={{ display: showLogo ? "" : "none" }}
+          style={{ display: showNav ? "" : "none" }}
         >
           <Toolbar>
+
             <img
               src={gbLogo}
               alt="logo"
               className={classes.menuLogo}
-              onClick={() => Scroll.scrollToTop()}
+              onClick={onImgClick}
             />
-            <AppBarCollapse />
+            <AppBarCollapse landingPage={props.landingPage}/>
           </Toolbar>
         </AppBar>
       </ElevationScroll>

@@ -12,7 +12,7 @@ const LandingPage = () => {
 
 	return (
 		<div>
-			<NavBar/>
+			<NavBar landingPage={true} />
 			<GingerHero/>
 			<Services/>
 			<About />

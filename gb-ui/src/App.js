@@ -1,15 +1,21 @@
-import React from 'react';
+import React from 'react'
 
 import { ThemeProvider } from '@material-ui/core/styles'
+import {
+  RouterProvider,
+} from "react-router-dom"
 
 import theme from "./sections/GingerTheme"
 import './App.css';
-import LandingPage from "./pages/LandingPage"
+import router from "./Router"
+
+
+
 
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <LandingPage/>
+      <RouterProvider router={router} />
     </ThemeProvider>
   )
 }
