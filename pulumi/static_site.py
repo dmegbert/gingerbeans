@@ -86,6 +86,20 @@ def create_static_site() -> dict:
     distribution = aws.cloudfront.Distribution(
         f"{prefix}-distribution",
         aliases=[alias],
+        custom_error_responses=[
+            aws.cloudfront.DistributionCustomErrorResponseArgs(
+                error_code=404,
+                response_code=200,
+                error_caching_min_ttl=0,
+                response_page_path="/index.html",
+            ),
+            aws.cloudfront.DistributionCustomErrorResponseArgs(
+                error_code=403,
+                response_code=200,
+                error_caching_min_ttl=0,
+                response_page_path="/index.html",
+            ),
+        ],
         default_cache_behavior=aws.cloudfront.DistributionDefaultCacheBehaviorArgs(
             allowed_methods=[
                 "DELETE",

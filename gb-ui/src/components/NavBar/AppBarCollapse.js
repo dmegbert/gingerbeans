@@ -28,30 +28,63 @@ const useStyles = makeStyles((theme) => ({
 		background: "transparent"
 	},
 	buttonText: {
+		color: "white",
 		textTransform: "uppercase",
 		fontSize: "1.25rem",
 		paddingLeft: 20,
 	}
 }))
 
-const AppBarCollapse = () => {
+const AppBarLink = (props) => {
+	const { sectionName, path, landingPage, menuItem } = props
 	const classes = useStyles()
+	const linkPath = path || `/#${sectionName}`
+	const onLandingPage = linkPath === `/#${sectionName}`
+
+	if (landingPage && onLandingPage) {
+		return (
+			<ScrollLink
+			activeClass="buttonActive"
+			to={sectionName}
+			spy={true}
+			offset={0}
+			duration={1000}
+			smooth={true}
+		>
+			{menuItem ? (
+				<MenuItem>
+					{sectionName}
+				</MenuItem>) : (
+					<Button className={classes.buttonText}>
+						{sectionName}
+					</Button>
+			)}
+		</ScrollLink>
+		)
+	} else {
+		return (
+			<a href={linkPath} style={{ textDecoration: "none" }}>
+			{menuItem ? (
+				<MenuItem>
+					{sectionName}
+				</MenuItem>) : (
+					<Button color="inherit" className={classes.buttonText}>
+						{sectionName}
+					</Button>
+			)}
+		</a>
+		)
+	}
+}
+
+const AppBarCollapse = (props) => {
+	const classes = useStyles()
+	const { landingPage } = props
 
 	return (
 		<div className={classes.root}>
 			<ButtonAppBarCollapse>
-				<ScrollLink
-					activeClass="buttonActive"
-					to="services"
-					spy={true}
-					offset={0}
-					duration={1000}
-					smooth={true}
-				>
-					<MenuItem>
-						Services
-					</MenuItem>
-				</ScrollLink>
+				<AppBarLink sectionName="Services"  landingPage={landingPage} menuItem={true} />
 				<ScrollLink
 					activeClass="buttonActive"
 					to="about"
@@ -86,46 +119,11 @@ const AppBarCollapse = () => {
 				</ScrollLink>
 			</ButtonAppBarCollapse>
 			<div className={classes.buttonBar} id="appbar-collapse">
-				<ScrollLink
-					activeClass="buttonActive"
-					to="services"
-					spy={true}
-					offset={0}
-					duration={1000}
-					smooth={true}
-				>
-					<Button color="inherit" className={classes.buttonText}>Services</Button>
-				</ScrollLink>
-				<ScrollLink
-					activeClass="buttonActive"
-					to="about"
-					spy={true}
-					offset={0}
-					duration={1000}
-					smooth={true}
-				>
-					<Button className={classes.buttonText} color="inherit">About</Button>
-				</ScrollLink>
-				<ScrollLink
-					activeClass="buttonActive"
-					to="portfolio"
-					spy={true}
-					offset={0}
-					duration={1000}
-					smooth={true}
-				>
-					<Button className={classes.buttonText} color="inherit">Portfolio</Button>
-				</ScrollLink>
-				<ScrollLink
-					activeClass="buttonActive"
-					to="contact"
-					spy={true}
-					offset={0}
-					duration={1000}
-					smooth={true}
-				>
-					<Button className={classes.buttonText} color="inherit">Contact</Button>
-				</ScrollLink>
+				<AppBarLink sectionName="services"  landingPage={landingPage} menuItem={false} />
+				<AppBarLink sectionName="about"  landingPage={landingPage} menuItem={false} />
+				<AppBarLink sectionName="portfolio"  landingPage={landingPage} menuItem={false} />
+				<AppBarLink sectionName="contact"  landingPage={landingPage} menuItem={false} />
+				<AppBarLink sectionName="blog" path="/blog"  landingPage={landingPage} menuItem={false} />
 			</div>
 	</div>
 	)
