@@ -27,7 +27,7 @@ import seglogic3 from "../imgs/seglogic-shopify.png"
 
 const useStyles = makeStyles((theme) => ({
   containerFluid: {
-    minHeight: "100vh",
+    minHeight: 730,
     width: "100%",
     [theme.breakpoints.up("md")]: {
       height: "90vh",

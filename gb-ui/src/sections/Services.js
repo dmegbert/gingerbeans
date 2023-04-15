@@ -8,7 +8,7 @@ import StorageIcon from "@material-ui/icons/Storage"
 
 const useStyles = makeStyles((theme) => ({
   containerFluid: {
-    minHeight: "100vh",
+    minHeight: 750,
     width: "100%",
     textAlign: "center",
     [theme.breakpoints.up("md")]: {
@@ -64,16 +64,6 @@ const Services = () => {
             <li>CI/CD - CircleCI, Jenkins</li>
           </Typography>
         </Grid>
-      </Grid>
-      <Grid
-        container
-        direction="row"
-        justify="center"
-        alignItems="flex-start"
-        className={classes.gridBody}
-        spacing={4}
-        style={{ paddingLeft: 20, paddingRight: 20 }}
-      >
         <Grid item xs={12} md={4}>
           <BuildOutlinedIcon className={classes.icon} />
           <Typography variant="h3">Product Development</Typography>

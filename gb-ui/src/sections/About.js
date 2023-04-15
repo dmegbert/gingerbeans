@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
   containerFluid: {
     backgroundColor: theme.palette.primary.main,
     width: "100%",
+    minHeight: 600,
     textAlign: "center",
     paddingTop: "10vh",
     [theme.breakpoints.up("md")]: {
