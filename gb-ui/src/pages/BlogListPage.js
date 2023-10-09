@@ -83,6 +83,72 @@ const BlogListPage = () => {
             <Divider />
           </Grid>
         </Grid>
+        <Grid
+          container
+          direction="row"
+          spacing={2}
+          justify="space-between"
+          alignItems="flex-start"
+        >
+          <Grid item sm={12} md={6} style={{ textAlign: "justify", marginTop: 30 }}>
+            <Typography variant="h4">Securing Serverless — Protect Lambda Apps with an API Gateway and WAF via Pulumi IaC</Typography>
+	          <Typography variant="body1" style={{ paddingTop: 20 }}>
+              Keep unwanted traffic and bad actors far away from your applications using AWS Web Application Firewalls (WAFs).
+            </Typography>
+            <Typography variant="h6"style={{ paddingTop: 10 }}>
+              Full Stack Application Deployment Series
+            </Typography>
+            <Typography variant="body1">This is the third article in a series that details how to set up a production-grade, full stack web application in AWS using Pulumi for our Infrastructure as Code (IaC) needs. The first article contains code and set up instructions that we will build on in this post.</Typography>
+            <Typography variant="h6" style={{ marginTop: 10 }}>
+              <Link href="/blog/securing_serverless">Read full blog here.</Link>
+            </Typography>
+          </Grid>
+          <Grid item sm={12} md={5} style={{ textAlign: "right", marginTop: 30 }}>
+            <Paper elevation={8} style={{ padding: 10, width: "50%"}}>
+              <img
+                src="https://miro.medium.com/v2/resize:fit:1024/format:webp/1*bLlQCma1HLZ-sH3-hhyu1w.jpeg"
+                alt="zombies attacking a wall"
+                width="100%"
+              />
+            </Paper>
+          </Grid>
+          <Grid item sm={10}>
+            <Divider />
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          direction="row"
+          spacing={2}
+          justify="space-between"
+          alignItems="flex-start"
+        >
+          <Grid item sm={12} md={6} style={{ textAlign: "justify", marginTop: 30 }}>
+            <Typography variant="h4">Protect Your Apps with AWS Managed Rules for WAF v2 via Pulumi IaC</Typography>
+	          <Typography variant="body1" style={{ paddingTop: 20 }}>
+
+            </Typography>
+            <Typography variant="h6"style={{ paddingTop: 10 }}>
+              Full Stack Application Deployment Series
+            </Typography>
+            <Typography variant="body1">This is the fourth article in a series that details how to set up a production-grade, full stack web application in AWS using Pulumi for our Infrastructure as Code (IaC) needs. The first article contains code and set up instructions that we will build on in this post.</Typography>
+            <Typography variant="h6" style={{ marginTop: 10 }}>
+              <Link href="/blog/waf_v2">Read full blog here.</Link>
+            </Typography>
+          </Grid>
+          <Grid item sm={12} md={5} style={{ textAlign: "right", marginTop: 30 }}>
+            <Paper elevation={8} style={{ padding: 10, maxWidth: 275 }}>
+              <img
+                src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*Bl5ipNcQww5ARqZsg6KlfA.png"
+                alt="WAF v2 architecture diagram"
+                width="100%"
+              />
+            </Paper>
+          </Grid>
+          <Grid item sm={10}>
+            <Divider />
+          </Grid>
+        </Grid>
 			</Container>
 	</>
 	)

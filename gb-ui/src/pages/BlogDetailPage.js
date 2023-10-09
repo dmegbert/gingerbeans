@@ -11,6 +11,8 @@ import remarkGfm from 'remark-gfm'
 const blogSlugs = [
 	"static_site_blog",
 	"api_aws_lambda",
+	"securing_serverless",
+	"waf_v2",
 ]
 
 const BlogDetailPage = () => {
